@@ -1,0 +1,32 @@
+﻿@model ContactViewModel
+@{ 
+    ViewData["Title"] = "Contact";
+}
+@section Scripts{ 
+    <!-- serve per portare gli stessi controlli server-side di ContactViewModel anche client side, senza duplicare il codice-->
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+
+<h1>Contact MVC classico</h1>
+<form method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div class="form-group">
+        <label asp-for="Nome">Nome</label>
+        <!--required pattern="[A-Z][a-z]{1,11}"-->
+        <input type="text" class="form-control" asp-for="Nome" />
+        <span asp-validation-for="Nome"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Cognome">Cognome</label>
+        <input type="text" class="form-control" asp-for="Cognome" />
+        <span asp-validation-for="Cognome"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Titolo">Titolo di Studio</label>
+        <input type="text" class="form-control" asp-for="Titolo" />
+        <span asp-validation-for="Titolo"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Invia</button>
+</form>
+
+<h3>@ViewBag.Message</h3>

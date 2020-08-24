@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Category>
+<!--così il tipo del model può essere solo IEnumerable<Category>-->
+<!--: più efficiente perchè è binding statico e funziona Intellicence-->
+<h1>Index Category</h1>
+
+<h3>@ViewBag.Message</h3>
+<h3>@ViewData["1"]</h3>
+<h3>@ViewData["2"]</h3>
+
+<!--accediamo al modello che il controller ha passato come parametro-->
+<table border="1">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Nome</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var category in Model)
+        {
+            <tr>
+                <td>@category.Id</td>
+                <td>@category.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>

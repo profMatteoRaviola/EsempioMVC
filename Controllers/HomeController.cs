@@ -21,8 +21,8 @@ namespace EsempioMVC.Controllers
         //da 1 a N metody "Action qualcosa"
         public IActionResult Index() //chiama il file index del sito
         {
-            throw new InvalidOperationException();
-            //return View();
+            //throw new InvalidOperationException();
+            return View();
         }
 
         public IActionResult Privacy() //chiama il file con le info Privacy

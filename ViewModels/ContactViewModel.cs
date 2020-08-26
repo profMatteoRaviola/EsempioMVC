@@ -10,11 +10,6 @@ namespace EsempioMVC.ViewModels
     //nell'esempio vengono iniettate le regole di validazione dei campi
     public class ContactViewModel //deve riflettere i campi del form che vogliamo creare
     {
-        /*Regex pattern = new Regex(@"^[A-Z][a-z]{9}");
-        private string nome;
-        private string cognome;
-        private string titolo;*/
-
         [Required(ErrorMessage ="Messaggio personalizzato: Nome obbligatorio")]
         [RegularExpression("[A-Z][a-z]{1,11}",ErrorMessage ="Il nome non è conforme ")]
         public string Nome { get; set; }

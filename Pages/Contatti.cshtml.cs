@@ -24,7 +24,8 @@ namespace EsempioMVC.RasorPages
 
         public void OnPost()
         {
-            ViewData["result"] = "Method: POST \nDati arrivati alla Rasor Page in formato corretto";
+            ViewData["result1"] = "Method: POST";
+            ViewData["result2"] = "Dati arrivati alla Rasor Page in formato corretto";
         }
     }
 }
